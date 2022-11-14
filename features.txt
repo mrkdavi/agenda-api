@@ -1,0 +1,4 @@
+create and list notes
+create reminders send by email
+create and list contacts
+create and list checklist
