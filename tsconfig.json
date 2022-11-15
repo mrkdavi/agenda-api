@@ -1,21 +1,13 @@
 {
   "compilerOptions": {
     "target": "es2016",
-
     "module": "commonjs",
     "rootDir": "./",
     "outDir": "./dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-
     "skipLibCheck": true,
-
-    "compilerOptions": {
-      "sourceMap": true,
-      "outDir": "dist",
-      "strict": true,
-      "lib": ["esnext"],
-      "esModuleInterop": true
-    }
+    "strict": true,
+    "lib": ["esnext"]
   }
 }
