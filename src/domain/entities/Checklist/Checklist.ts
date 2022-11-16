@@ -1,4 +1,4 @@
-import { ChecklistItem } from './ChecklistItem';
+import { ChecklistItem } from '../ChecklistItem/ChecklistItem';
 
 export interface ChecklistProps {
   id?: string;
