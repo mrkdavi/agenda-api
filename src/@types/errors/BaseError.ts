@@ -3,6 +3,6 @@ export class BaseError extends Error {
 
   constructor (msg = '', code: number) {
     super(msg);
-    this.statusCode = code
+    this.statusCode = code;
   }
 }
