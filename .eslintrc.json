@@ -16,6 +16,6 @@
     ],
     "rules": {
         "no-useless-constructor": "off",
-        "semi": "off"
+        "semi": [2, "always"]
     }
 }
