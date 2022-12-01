@@ -13,4 +13,4 @@ import { createServer } from './config/server/createServer';
   createRoutes(app);
   createErrorHandler(app);
   createServer(app);
-})()
+})();
