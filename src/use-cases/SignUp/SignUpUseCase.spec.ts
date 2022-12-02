@@ -15,7 +15,7 @@ describe('User', () => {
   });
 
   it('should response a token', () => {
-    userRepository.create = vi.fn().mockResolvedValueOnce(user);
+    userRepository.createUser = vi.fn().mockResolvedValueOnce(user);
     vi.spyOn(generateToken, 'default').mockReturnValueOnce(userTokenMock);
 
     const response = signUpUseCase.execute(signUpRequestMock);

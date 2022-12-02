@@ -3,15 +3,9 @@ import generateToken from '../../helpers/generateToken';
 import { IUserRepository } from '../../@types/repositories/IUserRepository';
 
 export class SignUpUseCase {
-  constructor (private User: IUserRepository) {}
-  async execute ({ name, email, password }: UserRequestData) {
-    const user = await this.User.create({
-      data: {
-        name,
-        email,
-        password
-      }
-    });
+  constructor (private userRepository: IUserRepository) {}
+  async execute (userData: UserRequestData) {
+    const user = await this.userRepository.createUser(userData)
 
     const token = generateToken({ sub: user.id });
 
