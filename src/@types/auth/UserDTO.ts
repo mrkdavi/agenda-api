@@ -7,3 +7,8 @@ export interface UserRequestData {
   email:string;
   password: string;
 }
+
+export interface UserRequestCredentials {
+  email:string;
+  password: string;
+}
