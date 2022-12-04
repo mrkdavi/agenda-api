@@ -3,6 +3,7 @@ import { User } from '../../entities/User/User';
 import { SignUpUseCase } from '../../use-cases/SignUp/SignUpUseCase';
 import { signUpRequestMock, userMock, userTokenMock } from '../../mocks/userMocks';
 import { IUserRepository } from '../../@types/repositories/IUserRepository';
+import * as hashPassword from '../../helpers/hashPassword';
 import * as generateToken from '../../helpers/generateToken';
 
 describe('SignUpUseCase', () => {
@@ -16,6 +17,7 @@ describe('SignUpUseCase', () => {
 
   it('should response a token', () => {
     userRepository.createUser = vi.fn().mockResolvedValueOnce(user);
+    vi.spyOn(hashPassword, 'default').mockReturnValueOnce(user.password);
     vi.spyOn(generateToken, 'default').mockReturnValueOnce(userTokenMock);
 
     const response = signUpUseCase.execute(signUpRequestMock);

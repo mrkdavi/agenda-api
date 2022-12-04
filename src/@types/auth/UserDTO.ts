@@ -12,3 +12,10 @@ export interface UserRequestCredentials {
   email:string;
   password: string;
 }
+
+export interface UserQueryData {
+  id?: string;
+  name?: string;
+  email?:string;
+  password?: string;
+}
