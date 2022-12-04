@@ -6,9 +6,9 @@ import hashPassword from '../../helpers/hashPassword';
 
 export class SignInUseCase {
   constructor (private userRepository: IUserRepository) {}
+
   async execute ({ email, password }: UserRequestCredentials) {
     const hashedPassword = hashPassword(password);
-
     const user = await this.userRepository.findOneUser({
       email,
       password: hashedPassword
