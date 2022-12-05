@@ -4,14 +4,15 @@ import { Note } from '../entities/Note/Note';
 import { prisma } from '../lib/prisma';
 
 export class NoteRepository implements INoteRepository {
-  async createNote ({ subject, content, userId }: NoteRequestData) {
-    return new Note(await prisma.note.create({
+  async createNote (noteData : NoteRequestData) {
+    const { content, subject, userId, user } = new Note(await prisma.note.create({
       data: {
-        subject,
-        content,
-        userId
+        subject: noteData.subject,
+        content: noteData.content,
+        userId: noteData.userId
       }
     }));
+    return { content, subject, userId, user } as Note;
   }
 
   async findAllUserNotes (userId: string) {
