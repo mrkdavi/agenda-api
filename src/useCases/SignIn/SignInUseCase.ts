@@ -1,4 +1,4 @@
-import { UserRequestCredentials } from '../../@types/auth/UserDTO';
+import { UserRequestCredentials } from '../../@types/DTOs/UserDTO';
 import Unauthorized from '../../@types/errors/Unauthorized';
 import { IUserRepository } from '../../@types/repositories/IUserRepository';
 import generateToken from '../../helpers/generateToken';

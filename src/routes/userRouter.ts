@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import { userValidator } from '../middlewares/validators/userValidator';
 import { loginValidator } from '../middlewares/validators/loginValidator';
-import { SignUpController } from '../use-cases/SignUp/SignUpController';
-import { SignInController } from '../use-cases/SignIn/SignInController';
+import { SignUpController } from '../useCases/SignUp/SignUpController';
+import { SignInController } from '../useCases/SignIn/SignInController';
 
 const router = Router();
 

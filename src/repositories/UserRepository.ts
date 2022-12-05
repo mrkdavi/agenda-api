@@ -1,4 +1,4 @@
-import { UserQueryData, UserRequestData } from '../@types/auth/UserDTO';
+import { UserQueryData, UserRequestData } from '../@types/DTOs/UserDTO';
 import { IUserRepository } from '../@types/repositories/IUserRepository';
 import { User } from '../entities/User/User';
 import { prisma } from '../lib/prisma';

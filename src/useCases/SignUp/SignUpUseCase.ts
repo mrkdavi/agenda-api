@@ -1,4 +1,4 @@
-import { UserRequestData } from '../../@types/auth/UserDTO';
+import { UserRequestData } from '../../@types/DTOs/UserDTO';
 import generateToken from '../../helpers/generateToken';
 import { IUserRepository } from '../../@types/repositories/IUserRepository';
 import hashPassword from '../../helpers/hashPassword';
