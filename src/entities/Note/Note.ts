@@ -11,6 +11,10 @@ export interface NoteProps {
 export class Note {
   private props: NoteProps;
 
+  get id () {
+    return this.props.id;
+  }
+
   get subject () {
     return this.props.subject;
   }
