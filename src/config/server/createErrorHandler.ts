@@ -9,6 +9,7 @@ import { BaseError } from '../../@types/errors/BaseError';
 
 export function createErrorHandler (app: Express) {
   app.use((err: BaseError | ZodError, _req: Request, res: Response, _next: NextFunction) => {
+    console.log(err);
     if (err instanceof BaseError) {
       return res.status(err.statusCode).json([{
         statusCode: err.statusCode,
