@@ -3,4 +3,5 @@ import { NoteRequestData } from '../DTOs/NoteDTO';
 
 export interface INoteRepository {
   createNote(noteRequestData : NoteRequestData): Promise<Note>;
+  findAllUserNotes (userId: string): Promise<Note[]>
 }

@@ -14,12 +14,12 @@ export class UserRepository implements IUserRepository {
     }));
   }
 
-  async findOneUser (userQueryData: UserQueryData): Promise<User | null> {
+  async findOneUser (userQueryData: UserQueryData) {
     const user = await prisma.user.findFirst({
       where: { ...userQueryData }
     });
 
-    if (!user) return user;
+    if (!user) return null;
 
     return new User(user);
   }

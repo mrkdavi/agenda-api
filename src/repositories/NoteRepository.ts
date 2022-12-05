@@ -13,4 +13,15 @@ export class NoteRepository implements INoteRepository {
       }
     }));
   }
+
+  async findAllUserNotes (userId: string) {
+    const notes = await prisma.note.findMany({
+      where: { userId }
+    });
+
+    return notes.map((note) => {
+      const { content, subject, userId, user } = new Note(note);
+      return { content, subject, userId, user } as Note;
+    });
+  }
 }
