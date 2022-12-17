@@ -21,8 +21,7 @@ export class Contact {
       id: this.props.id,
       name: this.props.name,
       phone: this.props.phone,
-      note: this.props.note,
-      userId: this.props.userId
+      note: this.props.note
     };
   }
 
