@@ -15,20 +15,36 @@ export class Note {
     return this.props.id;
   }
 
-  get subject () {
+  get subject (): string | null {
     return this.props.subject;
+  }
+
+  set subject (subject: string | null) {
+    this.props.subject = subject;
   }
 
   get content () {
     return this.props.content;
   }
 
+  set content (content: string) {
+    this.props.content = content;
+  }
+
   get userId () {
     return this.props.userId;
   }
 
-  get user () {
+  set userId (userId: string) {
+    this.props.userId = userId;
+  }
+
+  get user (): User | undefined {
     return this.props.user;
+  }
+
+  set user (user: User | undefined) {
+    this.props.user = user;
   }
 
   constructor (props: NoteProps) {

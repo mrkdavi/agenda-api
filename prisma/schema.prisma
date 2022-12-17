@@ -50,7 +50,7 @@ model Reminder {
 model Contact {
   id     String  @id @default(cuid())
   name   String
-  number String
+  phone  String
   note   String?
   userId String
 

@@ -8,6 +8,10 @@ export interface UserProps {
 export class User {
   private props: UserProps;
 
+  constructor (props: UserProps) {
+    this.props = props;
+  }
+
   get id () {
     return this.props.id;
   }
@@ -16,8 +20,16 @@ export class User {
     return this.props.name;
   }
 
+  set name (name: string) {
+    this.props.name = name;
+  }
+
   get email () {
     return this.props.email;
+  }
+
+  set email (email: string) {
+    this.props.email = email;
   }
 
   get password () {
@@ -26,9 +38,5 @@ export class User {
 
   set password (password: string) {
     this.props.password = password;
-  }
-
-  constructor (props: UserProps) {
-    this.props = props;
   }
 }
