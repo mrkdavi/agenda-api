@@ -17,7 +17,7 @@ export class NoteRepository implements INoteRepository {
         userId: noteData.userId
       }
     });
-    return this.formatNote(note);
+    return this.noteMapper(note);
   }
 
   async updateNote (id: string, noteData: NoteRequestData) {
@@ -30,7 +30,7 @@ export class NoteRepository implements INoteRepository {
       where: { id }
     });
 
-    return this.formatNote(updatedNote);
+    return this.noteMapper(updatedNote);
   }
 
   async findAllUserNotes (userId: string) {
@@ -38,7 +38,7 @@ export class NoteRepository implements INoteRepository {
       where: { userId }
     });
 
-    return notes.map((note) => this.formatNote(note));
+    return notes.map((note) => this.noteMapper(note));
   }
 
   async findOneUserNotes ({ id, userId, content, subject }: UserNoteQuery) {
@@ -57,10 +57,10 @@ export class NoteRepository implements INoteRepository {
 
     if (!note) return null;
 
-    return this.formatNote(note);
+    return this.noteMapper(note);
   }
 
-  private formatNote (note: NoteModel) {
+  private noteMapper (note: NoteModel) {
     const { id, content, subject, userId, user } = new Note(note);
     return { id, content, subject, userId, user } as Note;
   }
