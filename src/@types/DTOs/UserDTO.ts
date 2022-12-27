@@ -8,6 +8,12 @@ export interface UserRequestData {
   password: string;
 }
 
+export interface UserResponseData {
+  name: string;
+  email:string;
+  password: string;
+}
+
 export interface UserRequestCredentials {
   email:string;
   password: string;
