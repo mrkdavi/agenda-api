@@ -42,6 +42,7 @@ model Reminder {
   name     String
   note     String?
   remindAt DateTime
+  reminded Boolean?
   userId   String
 
   User User @relation(fields: [userId], references: [id])
