@@ -37,6 +37,10 @@ Install Dependencies
 ```
 npm install
 ```
+Run Migrations
+```
+npx prisma migrate dev 
+```
 Start Development Server
 ```
 npm run dev
