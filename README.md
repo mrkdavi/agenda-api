@@ -1,8 +1,10 @@
 <p align="center">
 <img src="./assets/agenda-img.png" height="200"/>
 <br>
+<h1 align="center">
+  Agenda API
+</h1>
 
-<hr />
 </p>
 <p align="center">
   A project built with Node.js, Express, Prisma, and SQLite.
@@ -16,7 +18,7 @@
 </p>
 
 
-# 📝 About
+## 📝 About
 
 This API was built with the intention of being used like an agenda. You can create notes, reminders, checklists, and add contacts. Fun fact: the reminders are sent to your email. In this project, I tried to use the best practices of Node.js. I also tried to use the SOLID principles and some DDD (Domain-Driven Design) patterns.
 
